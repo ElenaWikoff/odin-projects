@@ -1,0 +1,332 @@
+:root {
+    --white: #fcfaf1;
+    /* Snowy Mountain White */
+    --black: #2c231c;
+    /* Autumn Shadows Black */
+    --bg-grey: #f9fafb;
+    /* Banner Background Grey */
+    --outline-grey: #edeef0;
+    /* Outline Grey */
+    --autumn: #ac6718;
+    /* Autumn Copper Grass */
+    --autumn-light: #cfa859;
+    /* Autumn Copper Grass in Light */
+    --sky-blue: #8eb5c4;
+    /* Sky Blue */
+    --sky-blue-light: #d2e5eb;
+    /* Sky Blue Light */
+    --slate-blue: #4e5659;
+    /* Mountain Slate Blue */
+    --error: #be0000;
+    /* Error Red */
+    --valid: #53ae3e;
+    /* Valid Green */
+    --invalid: var(--error);
+    /* Invalid Red */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+    height: 100vh;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: "Norse-Bold";
+    src: url("./assets/fonts/Norse-Bold.woff") format("woff");
+}
+
+/* Sign-up Banner Structure */
+
+.sign-up-banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.main-container {
+    width: 100%;
+    height: auto;
+}
+
+/* Picture Container */
+
+.picture-container {
+    position: relative;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    background-image: url("./assets/images/cover-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.picture-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.picture-container .header-overlay {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 200px;
+    padding: 20px;
+}
+
+.picture-container hgroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture-container .logo-header {
+    font-size: 7.5rem;
+    color: var(--white);
+}
+
+.picture-container .logo {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+figure.picture-container figcaption {
+    position: absolute;
+    bottom: 20px;
+    color: var(--white);
+
+    a {
+        color: inherit;
+    }
+}
+
+.logo-header {
+    font-family: "Norse-Bold", fantasy;
+}
+
+/* Main Container */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bg-grey);
+}
+
+.main-container>div {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.main-container>.text-container,
+.main-container>.cta-container {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+/* Main Container - Text */
+
+.main-container>.text-container {
+    font-weight: 700;
+    font-size: 1.5rem;
+    max-width: 60ch;
+}
+
+.main-container>.text-container p:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+/* Main Container - Form */
+
+.form-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 750px;
+    margin: 20px 0;
+    column-gap: 35px;
+    row-gap: 15px;
+}
+
+.form-grid .input-group {
+    width: 100%;
+}
+
+.form-grid label {
+    font-weight: 600;
+    color: var(--slate-blue);
+    white-space: nowrap;
+}
+
+.form-grid input {
+    width: 100%;
+    max-width: 330px;
+    border-radius: 7.5px;
+    padding: 2px 10px;
+    font-size: 1.125rem;
+    border: 2px solid var(--outline-grey);
+}
+
+.form-grid input:focus,
+.form-grid input:focus-visible,
+.form-grid input:active {
+    background-color: #eef5f8;
+    border-color: var(--sky-blue);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    outline: none;
+}
+
+.form-grid input:valid,
+.form-grid input:focus:valid,
+.form-grid input:focus-visible:valid,
+.form-grid input:active:valid {
+    background-color: rgba(83, 174, 62, 0.1);
+    border-color: var(--valid);
+}
+
+.form-grid input:not([type="password"]):focus:invalid,
+.form-grid input:not([type="password"]):focus-visible:invalid,
+.form-grid input:not([type="password"]):active:invalid {
+    background-color: rgba(207, 168, 89, 0.1);
+    border-color: var(--autumn-light);
+}
+
+.form-grid input[type="password"]:invalid,
+.form-grid input[type="password"]:focus:invalid,
+.form-grid input[type="password"]:focus-visible:invalid,
+.form-grid input[type="password"]:active:invalid {
+    background-color: rgba(190, 0, 0, 0.1);
+    border-color: var(--invalid);
+}
+
+.form-container .input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Main Container - Call to Action */
+
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+.cta-container button.cta {
+    color: var(--white);
+    background-color: var(--autumn);
+    padding: 10px 40px;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 7.5px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    transition: all 0.1s ease-in-out;
+}
+
+.cta-container button.cta:focus,
+.cta-container button.cta:active,
+.cta-container button.cta:hover {
+    background-color: var(--autumn-light);
+}
+
+.cta-container .login-link {
+    font-weight: 500;
+}
+
+.cta-container .login-link a {
+    text-decoration: none;
+    color: var(--autumn);
+    font-weight: 700;
+}
+
+.cta-container .login-link a:visited {
+    color: var(--autumn);
+}
+
+@media screen and (max-width: 768px) {
+    .sign-up-banner {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .picture-container {
+        width: 100% !important;
+        padding: 20px 0;
+    }
+
+    .picture-container .header-overlay,
+    figure.picture-container figcaption {
+        position: static !important;
+    }
+
+    .picture-container .header-overlay {
+        height: 100px;
+    }
+
+    .picture-container .logo-header {
+        font-size: 5rem;
+    }
+
+    figure.picture-container figcaption {
+        padding-top: 15px;
+        color: black;
+    }
+
+    .main-container>div {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .main-container>.text-container {
+        font-size: 1rem;
+        max-width: none;
+    }
+
+    .form-container h2,
+    .cta-container button.cta,
+    .form-container input {
+        font-size: 1rem;
+    }
+
+    .form-grid {
+        row-gap: 5px;
+        column-gap: 10px;
+    }
+
+    .form-grid label {
+        font-size: 0.75rem;
+    }
+
+    .cta-container {
+        align-items: center;
+    }
+
+}

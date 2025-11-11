@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Sign-up Form</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <main>
+        <!-- Sign Up Banner -->
+        <section class="sign-up-banner">
+            <!-- Left/Top Container -->
+            <figure class="picture-container">
+                <!-- Header Overlay with Logo -->
+                <hgroup class="header-overlay">
+                    <img class="logo" src="./assets/images/odin-logo-lined.png">
+                    <h1 class="logo-header">Odin</h1>
+                </hgroup>
+                <!-- Cover Image -->
+                <img style="display: none;" src="./assets/images/cover-image.jpg"
+                    alt="An autumn valley, snowy mountains to the left and background, a blue sky above.">
+                <!-- Image Attribution -->
+                <figcaption class="attribution">Photo by&nbsp;<a href="https://unsplash.com/@nate_dumlao"
+                        target="_blank">Nathan Dumlao</a>&nbsp;on <a
+                        href="https://unsplash.com/photos/gray-concrete-mountain-during-daytime-Wm4vaMmHwS0"
+                        target="_blank">Unplash</a>
+                </figcaption>
+            </figure>
+            <!-- Right/Bottom Container -->
+            <div class="main-container">
+                <!-- Text -->
+                <div class="text-container">
+                    <p>This is not a real online service! You know you need something like this in your life to help you
+                        realize your deepest dreams. <br>Sign up now to get started</p>
+                    <p>You <em>know</em> you want to.</p>
+                </div>
+                <!-- Sign Up Form -->
+                <div class="form-container">
+                    <form id="login-form">
+                        <h2>Let's do this!</h2>
+                        <div class="form-grid">
+                            <!-- First Name -->
+                            <div class="input-group">
+                                <label for="first_name">First Name</label>
+                                <input type="text" id="first_name" name="first_name" placeholder="Jane" required>
+                            </div>
+                            <!-- Last Name -->
+                            <div class="input-group">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" id="last_name" name="last_name" placeholder="Doe" required>
+                            </div>
+                            <!-- Email -->
+                            <div class="input-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="janedoe@example.com" required>
+                            </div>
+                            <!-- Phone Number -->
+                            <div class="input-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="800-555-5555"
+                                    pattern="(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}" required>
+                            </div>
+                            <!-- Password -->
+                            <div class="input-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" minlength="8" maxlength="30"
+                                    pattern="(?=.*[!@#$%^&*()])(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}" required>
+                            </div>
+                            <!-- Confirm Password -->
+                            <div class="input-group">
+                                <label for="confirm_password">Confirm Password</label>
+                                <input type="password" id="confirm_password" name="confirm_password" minlength="8"
+                                    maxlength="30" pattern="(?=.*[!@#$%^&*()])(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}"
+                                    required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Call to Action -->
+                <div class="cta-container">
+                    <button class="cta" type="submit" form="login-form">Create Account</button>
+                    <p class="login-link">Already have an account? <a href="#">Log in</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
