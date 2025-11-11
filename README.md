@@ -8,7 +8,7 @@
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | Recipes | HTML Foundations | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/recipes) | [Demo](https://elenawikoff.github.io/odin-projects/recipes) | ✅ |
 | Landing Page | Flexbox  | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/landing-page) | [Demo](https://elenawikoff.github.io/odin-projects/landing-page) | ✅ |
-| Rock Paper Scissors | JavaScript Basics | WIP | WIP | ✅ |
+| Rock Paper Scissors | JavaScript Basics | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/rps) | [Demo](https://elenawikoff.github.io/odin-projects/rps) | ✅ |
 | Etch-a-Sketch	 | JavaScript Basics | WIP | WIP | ✅ |
 | Calculator | JavaScript Basics | WIP | WIP | ❌ |
 

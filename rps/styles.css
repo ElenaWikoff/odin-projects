@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header,
+footer {
+    flex: 0 0 auto;
+    padding: 12px;
+    background-color: lightgrey;
+}
+
+header,
+main,
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    padding: 12px;
+    background-color: lightgrey;
+}
+
+main {
+    flex: 1 1 0;
+    overflow: hidden;
+}
+
+.app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin: 12px;
+}
+
+#resetGame {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: lightblue;
+    border-color: lightskyblue;
+    font-weight: bold;
+}
+
+#resetGame:focus,
+#resetGame:active,
+#resetGame:hover {
+    background-color: lightskyblue;
+}
+
+.score {
+    font-size: 32px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.message {
+    font-size: 2.0em;
+}
+
+#gameSpace {
+    display: flex;
+    justify-content: space-around;
+    gap: 64px;
+    height: 70%;
+    width: 100%;
+}
+
+.choices {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto-fit;
+    gap: 12px;
+    height: 100%;
+}
+
+.choices>button,
+.choices>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    padding: 32px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.choices>button {
+    cursor: pointer;
+}
+
+.choices>button:focus,
+.choices>button:active,
+.choices>button:hover,
+.choices>button.selected:hover {
+    background-color: lightgoldenrodyellow;
+}
+
+.choices img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.message,
+.submessage {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.submessage {
+    font-size: 18px;;
+}
+
+#player.choices>button.selected,
+#player.choices>button.selected:focus,
+#player.choices>button.selected:active {
+    background-color: rgb(255, 255, 152);
+}
+
+#computer.choices>div.selected {
+    background-color: coral;
+}
