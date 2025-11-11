@@ -121,6 +121,7 @@ h6 {
 }
 
 body {
+  position: relative;
   height: 100vh;
   font-family: 'Habbo', 'Courier New', Courier, monospace;
   background: var(--blue);
@@ -261,9 +262,44 @@ h6 {
   width: 64px;
 }
 
-@media screen and (max-width: 600px) {
+footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.attribution {
+  color: white;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--orange);
+}
+
+*:focus {
+  outline-color: var(--orange);
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    height: auto;
+  }
+
   .recipe-list {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    padding: 16px;
   }
 }
 
@@ -284,5 +320,11 @@ h6 {
 @media screen and (hovers: none) {
   .recipe-list .recipe-card a:hover {
     transform: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .attribution a {
+    color: white;
   }
 }
