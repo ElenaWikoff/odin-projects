@@ -31,7 +31,7 @@
 
 | Project | Topic | Repository | Live Preview | Completed | Notes |
 |---------|-------|------------|--------------|-----------|-------|
-| Library                  | Objects and Object constructors, OOP  | Code       | Demo         | ✅ |  |
+| Library | OOP | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/library) | [Demo](https://elenawikoff.github.io/odin-projects/library) | ✅ | [Original](https://github.com/ElenaWikoff/odin-library) |
 | Tic Tac Toe              | Factory functions and module patterns | Code       | Demo         | ✅ |  |
 | Restaurant Page          | ES6 modules, Webpack                  | Code       | Demo         | ✅ |  |
 | Todo List                | SOLID principles                      | Code       | Demo         | ❌ |  |
