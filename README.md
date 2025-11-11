@@ -33,7 +33,7 @@
 |---------|-------|------------|--------------|-----------|-------|
 | Library | OOP | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/library) | [Demo](https://elenawikoff.github.io/odin-projects/library) | ✅ | [Original](https://github.com/ElenaWikoff/odin-library) |
 | Tic Tac Toe | Factory functions and module patterns | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/tic-tac-toe) | [Demo](https://elenawikoff.github.io/odin-projects/tic-tac-toe) | ✅ | [Original](https://github.com/ElenaWikoff/odin-tic-tac-toe) |
-| Restaurant Page | ES6 modules, Webpack | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/restaurant) | [Demo](https://elenawikoff.github.io/odin-projects/restaurant/dist) | ❌ | [Original](https://github.com/ElenaWikoff/odin-restaurant-page/) |
+| Restaurant Page | ES6 modules, Webpack | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/restaurant) | [Demo](https://elenawikoff.github.io/odin-projects/restaurant/dist) | ✅ | [Original](https://github.com/ElenaWikoff/odin-restaurant-page/) |
 | Todo List | SOLID principles | Code | Demo | ❌ |  |
 | Weather App | Asynchronous JavaScript and APIs | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/weather) | [Demo](https://elenawikoff.github.io/odin-projects/weather/dist) | ✅ | [Original](https://github.com/ElenaWikoff/odin-weather) |
 | Merge Sort               | Recursion                             | Code       | -            | ✅ |  |
