@@ -34,12 +34,15 @@ module.exports = {
                 loader: "html-loader",
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                test: /\.(png|jpg|jpeg|gif)$/i,
                 type: "asset/resource",
+                generator: {
+                    filename: 'images/[name][ext]', // Customize output path
+                },
             },
             {
                 test: /\.svg$/i,
-                type: "asset/source",
+                type: "asset/inline",
             },
         ],
     },
