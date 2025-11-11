@@ -1,0 +1,93 @@
+:root {
+    --calc-bg: #eeeeee;
+    --calc-btn-border: #dddddd;
+    --calc-btn-bg: #d6d6d6;
+    --calc-op-bg: #f89401;
+    --calc-op-bg-active: #FFCC00;
+    --calc-num-bg: #fafafa;
+    --calc-btn-color: #2a2a2a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: var(--calc-bg);
+    padding: 10px;
+    gap: 8px;
+}
+
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    color: var(--calc-btn-color);
+    background-color: transparent;
+    border: 1px solid var(--calc-btn-border);
+    border-radius: 10px;
+}
+
+.btn:focus,
+.btn:active,
+.btn:hover {
+    border: 1px solid var(--calc-btn-color);
+}
+
+.btn.btn-small {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.btn-action {
+    background-color: var(--calc-btn-bg);
+}
+
+.btn-action:active,
+.btn-action:focus {
+    background-color: var(--calc-num-bg);
+}
+
+.btn-op {
+    background-color: var(--calc-op-bg);
+}
+
+.btn-op:active,
+.btn-op:focus {
+    background-color: var(--calc-op-bg-active);
+}
+
+.btn-op,
+.btn-inner {
+    font-weight: bold;
+}
+
+.btn-inner {
+    background-color: var(--calc-num-bg);
+}
+
+.btn-inner:active,
+.btn-inner:focus {
+    background-color: var(--calc-bg);
+}

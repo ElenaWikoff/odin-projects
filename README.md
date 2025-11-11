@@ -10,7 +10,7 @@
 | Landing Page | Flexbox  | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/landing-page) | [Demo](https://elenawikoff.github.io/odin-projects/landing-page) | ✅ | [Original](https://github.com/ElenaWikoff/odin-landing-page) |
 | Rock Paper Scissors | JavaScript Basics | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/rps) | [Demo](https://elenawikoff.github.io/odin-projects/rps) | ✅ | [Original](https://github.com/ElenaWikoff/odin-rps) |
 | Etch-a-Sketch	 | JavaScript Basics | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/etch-a-sketch) | [Demo](https://elenawikoff.github.io/odin-projects/etch-a-sketch) | ✅ | [Original](https://github.com/ElenaWikoff/odin-etch-a-sketch) |
-| Calculator | JavaScript Basics | WIP | WIP | ❌ |  |
+| Calculator | JavaScript Basics | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/calculator) | [Demo](https://elenawikoff.github.io/odin-projects/calculator)  | ❌ | WIP, [Original](https://github.com/ElenaWikoff/odin-calculator) |
 
 ## ⛊ Full Stack JavaScript
 
