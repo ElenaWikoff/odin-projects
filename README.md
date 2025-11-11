@@ -6,7 +6,7 @@
 
 | Project | Topic | Repository | Live Preview | Completed
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Recipes | HTML Foundations | (Code)[https://github.com/ElenaWikoff/odin-projects/tree/main/recipes] | (Demo)[/recipes] | ✅ |
+| Recipes | HTML Foundations | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/recipes) | [Demo](https://elenawikoff.github.io/odin-projects/recipes) | ✅ |
 | Landing Page | Flexbox  | WIP | WIP | ✅ |
 | Rock Paper Scissors | JavaScript Basics | WIP | WIP | ✅ |
 | Etch-a-Sketch	 | JavaScript Basics | WIP | WIP | ✅ |
