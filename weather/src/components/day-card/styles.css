@@ -1,0 +1,31 @@
+
+.day-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.day-card .main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 24px;
+    font-size: 1.125rem;
+}
+
+.day-card .icon-wrapper svg {
+    max-width: 5em;
+}
+
+.day-card .card-left,
+.day-card .card-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.day-card .temperature,
+.day-card .precipitation {
+    white-space: nowrap;
+    font-weight: bold;
+}
