@@ -1,0 +1,31 @@
+/* Pixel Fonts */
+
+@font-face {
+  /* Header Font */
+  font-family: 'AtariGames';
+  src: url('AtariGames.woff2') format('woff2'),
+    url('AtariGames.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  /* Body Font */
+  font-family: 'Habbo';
+  src: url('Habbo.woff2') format('woff2'),
+    url('Habbo.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  /* Numeral Font */
+  font-family: 'TinyUnicode';
+  src: url('TinyUnicode.woff2') format('woff2'),
+    url('TinyUnicode.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
