@@ -36,7 +36,7 @@
 | Restaurant Page | ES6 modules, Webpack | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/restaurant) | [Demo](https://elenawikoff.github.io/odin-projects/restaurant/dist) | ✅ | [Original](https://github.com/ElenaWikoff/odin-restaurant-page/) |
 | Todo List | SOLID principles | Code | Demo | ❌ |  |
 | Weather App | Asynchronous JavaScript and APIs | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/weather) | [Demo](https://elenawikoff.github.io/odin-projects/weather/dist) | ✅ | [Original](https://github.com/ElenaWikoff/odin-weather) |
-| Merge Sort               | Recursion                             | Code       | -            | ✅ |  |
+| Recursion | Recursion | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/recursion) | - | ✅ | [Original](https://github.com/ElenaWikoff/odin-recursion) |
 | Linked Lists             | Data structures and algorithms        | Code       | -            | ✅ |  |
 | Binary Search Trees      | Data structures and algorithms        | Code       | -            | ✅ |  |
 | Knights Travails         | Data structures and algorithms        | Code       | Demo         | ✅ |  |
