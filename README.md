@@ -23,7 +23,7 @@
 | Project | Topic | Repository | Live Preview | Completed | Notes |
 |---------|-------|------------|--------------|-----------|-------|
 | Sign-up Form | Forms | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/sign-up) | [Demo](https://elenawikoff.github.io/odin-projects/sign-up) | ✅ | [Original](https://github.com/ElenaWikoff/odin-sign-up) |
-| Admin Dashboard | Grid | Code | Demo | ✅ |  |
+| Admin Dashboard | Grid | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/admin-dashboard) | [Demo](https://elenawikoff.github.io/odin-projects/admin-dashboard) | ✅ | [Original](https://github.com/ElenaWikoff/odin-admin-dashboard) |
 
 ### Javascript
 

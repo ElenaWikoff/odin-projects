@@ -1,0 +1,411 @@
+:root {
+    --blue: #1992d4;
+    --blue-hover: #1FB1FF;
+    --yellow: #f0b429;
+    --grey: #e2e8f0;
+    --graphite: #636363;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    /* Fallback for older browsers */
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+/* General */
+
+main {
+    width: 100%;
+    height:100vh;
+}
+
+.profile-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.button-group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.btn.btn-icon {
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    font-size: 1.75rem;
+    border-radius: 100%;
+    padding: 6px;
+    transition: all 0.1s ease;
+}
+
+.btn.btn-primary {
+    border-radius: 30px;
+    color: white;
+    background-color: var(--blue);
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.275rem;
+    font-weight: 500;
+    transition: all 0.1s ease;
+}
+
+.btn.btn-primary:active,
+.btn.btn-primary:hover {
+    background-color: var(--blue-hover);
+}
+
+.btn.btn-icon:active,
+.btn.btn-icon:hover {
+    color: var(--blue);
+}
+
+/* Dashboard Layout */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+/* Sidebar */
+
+.sidebar {
+    grid-area: sidebar;
+    grid-column: 1 / span 2;
+    grid-row: 1 / -1;
+    color: white;
+    background-color: var(--blue);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 30px;
+}
+
+.sidebar .sidebar-header {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    place-content: flex-start;
+    gap: 15px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.sidebar .sidebar-header svg {
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    justify-self: flex-end;
+}
+
+.sidebar .sidebar-header h1 {
+    align-self: center;
+    justify-self: flex-start;
+    font-size: 1.75rem;
+}
+
+.sidebar .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.sidebar .sidebar-nav>ul {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+
+.sidebar .sidebar-nav>ul>li {
+    position: relative;
+    /* max-width: 100%; */
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    list-style: none;
+    cursor: pointer;
+    padding: 5px 30px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    align-items: center;
+    background-image: linear-gradient(to right, var(--blue-hover), var(--blue-hover), var(--blue), var(--blue), var(--blue));
+    background-size: 200% 100%;
+    background-position: 100% 0%;
+    transition: all 0.25s ease;
+}
+
+.sidebar .sidebar-nav>ul>li:focus,
+.sidebar .sidebar-nav>ul>li:active,
+.sidebar .sidebar-nav>ul>li:hover {
+    background-position: 0% 0%;
+    border-left: 10px solid var(--yellow);
+}
+
+/* Header */
+
+.header {
+    grid-area: header;
+    grid-column: 3 / -1;
+    grid-row: 1;
+    background-color: white;
+    padding: 15px 50px;
+    box-shadow: rgba(0, 0, 0, 0.75) 2.4px 2.4px 3.2px;
+}
+
+.header .main-header {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+}
+
+.header .main-header {
+    max-height: 100px;
+}
+
+.header .main-header .search-bar {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.header .main-header .search-bar svg {
+    font-size: 1.75rem;
+}
+
+.header .main-header .search-bar input[type="search"] {
+    max-width: 660px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--grey);
+}
+
+.header .main-header .profile-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.header .main-header .profile-container .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header .main-header .profile-circle {
+    max-width: 60px;
+}
+
+.header .sub-header {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    align-items: center;
+}
+
+.header .sub-header .profile-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header .sub-header .profile-circle {
+    max-width: 100px;
+}
+
+.header .sub-header .profile-container .user-info .eyebrow {
+    font-weight: 700;
+}
+
+/* Main Content */
+.main-content {
+    grid-area: main;
+    background-color: var(--grey);
+    grid-column: 3 / -1;
+    grid-row: 2;
+    padding: 30px  20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "proje proje proje annou"
+    "proje proje proje annou"
+    "proje proje proje trend"
+    "proje proje proje trend";
+    gap: 25px;
+}
+
+.main-content .projects {
+    height: 100%;
+    grid-area: proje;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.main-content .projects .project-card-grid {
+    flex: 1;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 25px;
+}
+
+.main-content .projects .project-card {
+    background-color: white;
+    height: 100%;
+    padding: 30px 20px;
+    border-radius: 10px;
+    border-left: 7.5px solid var(--yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-content .projects .project-card .card-text h4 {
+    font-size: 1.25rem;
+}
+
+.main-content .projects .project-card .card-text p {
+    font-size: 1.125rem;
+}
+
+.main-content .projects .project-card .button-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-content h3 {
+    font-size: 1.375em;
+    font-weight: 500;
+}
+
+.main-content p,
+.main-content .button-group {
+    color: var(--graphite);
+}
+
+.main-content .annoucements {
+    grid-area: annou;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.main-content .annoucements .annoucements-grid {
+    display: grid;
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    height: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    align-items: center;
+}
+
+.main-content .annoucements .annoucement-card {
+    padding: 10px 0px;
+}
+
+.main-content .annoucements .annoucement-card p {
+    font-size: 0.875rem;
+}
+
+.main-content .annoucements .annoucement-card:not(:last-child) {
+    border-bottom: 1px solid lightgray
+}
+
+.main-content .trending {
+    grid-area: trend;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.main-content .trending .trending-grid {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-content .trending .profile-card {
+    display: flex;
+    gap: 15px;
+}
+
+.main-content .trending .profile-card .user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-content .trending .profile-card .user-info .user-name {
+    color: black;
+}
+
+.main-content .trending .profile-circle {
+    max-width: 65px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1024px) {
+    .dashboard {
+        grid-template-columns: 205px 10fr;
+    }
+
+    .sidebar .sidebar-header {
+        padding: 15px;
+    }
+
+    .sidebar .sidebar-nav {
+        gap: 25px;
+    }
+
+    .sidebar .sidebar-nav>ul>li {
+        font-size: 1.25rem;
+        padding: 5px 15px;
+    }
+
+}

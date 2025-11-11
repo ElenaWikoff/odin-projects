@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Admin Dashboard</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Sidebar Header -->
+            <hgroup class="sidebar-header">
+                <svg width="1em" height="1em">
+                    <use fill="currentColor" href="./assets/images/icons/view-dashboard.svg"></use>
+                </svg>
+                <h1>Dashboard</h1>
+            </hgroup>
+
+            <!-- Sidebar Nav -->
+            <div class="sidebar-nav">
+                <ul>
+                    <li id="home">
+                        <svg width="1em" height="1em">
+                            <use fill="currentColor" href="./assets/images/icons/home.svg"></use>
+                        </svg>
+                        <span>Home</span>
+                    </li>
+                    <li id="profile">
+                        <svg width="1em" height="1em">
+                            <use fill="currentColor" href="./assets/images/icons/card-account-details-outline.svg">
+                            </use>
+                        </svg>
+                        <span>Profile</span>
+                    </li>
+                    <li id="messages">
+                        <svg width="1em" height="1em">
+                            <use fill="currentColor" href="./assets/images/icons/message.svg"></use>
+                        </svg>
+                        <span>Messages</span>
+                    </li>
+                    <li id="history">
+                        <svg width="1em" height="1em">
+                            <use fill="currentColor" href="./assets/images/icons/clock-time-three.svg"></use>
+                        </svg>
+                        <span>History</span>
+                    </li>
+                    <li id="tasks">
+                        <svg width="1em" height="1em">
+                            <use fill="currentColor" href="./assets/images/icons/note-multiple.svg"></use>
+                        </svg>
+                        <span>Tasks</span>
+                    </li>
+                    <li id="communities">
+                        <svg width="1em" height="1em">
+                            <use fill="currentColor" href="./assets/images/icons/account-group.svg"></use>
+                        </svg>
+                        <span>Communities</span>
+                    </li>
+                </ul>
+                <ul>
+                    <li id="settings">
+                        <svg width="1em" height="1em">
+                            <use fill="currentColor" href="./assets/images/icons/cog.svg"></use>
+                        </svg>
+                        <span>Settings</span>
+                    </li>
+                    <li id="support">
+                        <svg width="1em" height="1em">
+                            <use fill="currentColor" href="./assets/images/icons/help-box.svg"></use>
+                        </svg>
+                        <span>Support</span>
+                    </li>
+                    <li id="privacy">
+                        <svg width="1em" height="1em">
+                            <use fill="currentColor" href="./assets/images/icons/shield-check.svg"></use>
+                        </svg>
+                        <span>Privacy</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Header -->
+        <header class="header">
+            <!-- Top Header -->
+            <section class="main-header">
+                <!-- Search Bar -->
+                <form class="search-bar">
+                    <label for="search">
+                        <span class="visually-hidden">Search</span>
+                        <svg width="1em" height="1em">
+                            <use fill="currentColor" href="./assets/images/icons/magnify.svg"></use>
+                        </svg>
+                    </label>
+                    <input id="search" type="search">
+                </form>
+                <!-- Notifications and Profile -->
+                <div class="profile-container">
+                    <!-- Bell -->
+                    <button class="btn btn-icon">
+                        <svg width="1em" height="1em">
+                            <use fill="currentColor" href="./assets/images/icons/bell-ring-outline.svg"></use>
+                        </svg>
+                    </button>
+                    <!-- User Profile Picture -->
+                    <div class="profile-circle">
+                        <img alt="Profile image" src="./assets/images/profile-pictures/profile-0.jpg">
+                    </div>
+                    <!-- User Name -->
+                    <div class="name">
+                        Morgan Oakley
+                    </div>
+                </div>
+            </section>
+            <!-- Sub Header -->
+            <section class="sub-header">
+                <div class="profile-container">
+                    <!-- User Profile Picture -->
+                    <div class="profile-circle">
+                        <img alt="Profile image" src="./assets/images/profile-pictures/profile-0.jpg">
+                    </div>
+                    <!-- User Name -->
+                    <hgroup class="user-info">
+                        <p class="eyebrow">Hi there,</p>
+                        <h2>Morgan Oakley&nbsp;<span>(@morgan)</span></h2>
+                    </hgroup>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary">New</button>
+                    <button class="btn btn-primary">Upload</button>
+                    <button class="btn btn-primary">Share</button>
+                </div>
+            </section>
+        </header>
+
+        <!-- Main Content -->
+        <article class="main-content">
+            <!-- Projects -->
+            <section class="projects">
+                <h3>Your Projects</h3>
+                <div class="project-card-grid">
+                    <!-- Super Cool Project -->
+                    <div class="project-card">
+                        <div class="card-text">
+                            <h4>Super Cool Project</h4>
+                            <p>Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis
+                                felis accumsan nec.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="button-group">
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/star-plus-outline.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/eye-plus-outline.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/source-fork.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End: Project Card -->
+
+                    <!-- Less Cool Project -->
+                    <div class="project-card">
+                        <div class="card-text">
+                            <h4>Less Cool Project</h4>
+                            <p>Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt,
+                                consectetur sapien et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius
+                                pellentesque lacus.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="button-group">
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/star-plus-outline.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/eye-plus-outline.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/source-fork.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End: Project Card -->
+
+                    <!-- Impossible App -->
+                    <div class="project-card">
+                        <div class="card-text">
+                            <h4>Impossible App</h4>
+                            <p>In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat velit sagittis
+                                id.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="button-group">
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/star-plus-outline.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/eye-plus-outline.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/source-fork.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End: Project Card -->
+
+                    <!-- Easy Peasy App -->
+                    <div class="project-card">
+                        <div class="card-text">
+                            <h4>Easy Peasy App</h4>
+                            <p>Etiam cursus eros ac efficitur fringilla.
+                                Vestibulum dignissim urna eget accumsan
+                                aliquam. Curabitur dignissim nisi in tortor
+                                commodo, ac bibendum magna tincidunt.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="button-group">
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/star-plus-outline.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/eye-plus-outline.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/source-fork.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End: Project Card -->
+
+                    <!-- Ad Blocker -->
+                    <div class="project-card">
+                        <div class="card-text">
+                            <h4>Ad Blocker</h4>
+                            <p>Quisque eget rutrum nisl. Nam augue
+                                justo, cursus vitae metus vel, pharetra
+                                hendrerit felis. Aliquam sed malesuada.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="button-group">
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/star-plus-outline.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/eye-plus-outline.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/source-fork.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End: Project Card -->
+
+                    <!-- Money Maker -->
+                    <div class="project-card">
+                        <div class="card-text">
+                            <h4>Money Maker</h4>
+                            <p>Praesent convallis, libero quis congue
+                                elementum, nunc ante faucibus sapien, ac
+                                scelerisque tortor purus sit amet ex.
+                                Pellentesque mollis nec sem vel aliquam.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="button-group">
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/star-plus-outline.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/eye-plus-outline.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                                <button class="btn btn-icon">
+                                    <svg width="1em" height="1em">
+                                        <use fill="currentColor" href="./assets/images/icons/source-fork.svg">
+                                        </use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End: Project Card -->
+                </div>
+            </section>
+            <!-- Annoucements -->
+            <section class="annoucements">
+                <h3>Annoucements</h3>
+                <div class="annoucements-grid">
+                    <div class="annoucement-card">
+                        <h4>Site Maintenance</h4>
+                        <p>Vestibulum condimentum tellus lacus,
+                            in accumsan elit maximus ac. Donec
+                            hendrerit sodales congue...</p>
+                    </div>
+                    <div class="annoucement-card">
+                        <h4>Community Share Day</h4>
+                        <p>Nam vel lectus tincidunt, rutrum nulla
+                            eut ornare libero. Aliquam dictum
+                            accumsan porttitor...</p>
+                    </div>
+                    <div class="annoucement-card">
+                        <h4>Updated Privacy Policy</h4>
+                        <p>Phasellus efficitur nisi eget elit
+                            consectetur, eget condimentum ante
+                            auctor. Cras fringilla sagittis sem in
+                            mattis...</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Trending -->
+            <section class="trending">
+                <h3>Trending</h3>
+                <div class="trending-grid">
+                    <div class="profile-card">
+                        <div class="profile-circle">
+                            <img src="./assets/images/profile-pictures/profile-1.jpg" alt="Profile image">
+                        </div>
+                        <div class="user-info">
+                            <p class="user-name">@tegan</p>
+                            <p class="project-name">World Peace Builder</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-circle">
+                            <img src="./assets/images/profile-pictures/profile-0.jpg" alt="Profile image">
+                        </div>
+                        <div class="user-info">
+                            <p class="user-name">@morgan</p>
+                            <p class="project-name">Super Cool Project</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-circle">
+                            <img src="./assets/images/profile-pictures/profile-2.jpg" alt="Profile image">
+                        </div>
+                        <div class="user-info">
+                            <p class="user-name">@kendall</p>
+                            <p class="project-name">Life Changing App</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-circle">
+                            <img src="./assets/images/profile-pictures/profile-3.jpg" alt="Profile image">
+                        </div>
+                        <div class="user-info">
+                            <p class="user-name">@alex</p>
+                            <p class="project-name">No Traffic Maker</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>
