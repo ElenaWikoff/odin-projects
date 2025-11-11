@@ -38,7 +38,7 @@
 | Weather App | Asynchronous JavaScript and APIs | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/weather) | [Demo](https://elenawikoff.github.io/odin-projects/weather/dist) | ✅ | [Original](https://github.com/ElenaWikoff/odin-weather) |
 | Recursion | Recursion | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/recursion) | - | ✅ | [Original](https://github.com/ElenaWikoff/odin-recursion) |
 | Linked Lists | Data structures and algorithms | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/linked-list) | - | ✅ | [Original](https://github.com/ElenaWikoff/odin-linked-list) |
-| Binary Search Trees      | Data structures and algorithms        | Code       | -            | ✅ |  |
+| Binary Search Trees | Data structures and algorithms | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/binary-search-tree) | - | ✅ | [Original](https://github.com/ElenaWikoff/odin-binary-search-tree)
 | Knights Travails         | Data structures and algorithms        | Code       | Demo         | ✅ |  |
 | Testing Practice         | Test Driven Development               | Code       | -            | ✅ |  |
 | Battleship               | Test Driven Development               | Code       | Demo         | ❌ |  |
