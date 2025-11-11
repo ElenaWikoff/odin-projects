@@ -32,7 +32,7 @@
 | Project | Topic | Repository | Live Preview | Completed | Notes |
 |---------|-------|------------|--------------|-----------|-------|
 | Library | OOP | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/library) | [Demo](https://elenawikoff.github.io/odin-projects/library) | ✅ | [Original](https://github.com/ElenaWikoff/odin-library) |
-| Tic Tac Toe              | Factory functions and module patterns | Code       | Demo         | ✅ |  |
+| Tic Tac Toe | Factory functions and module patterns | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/tic-tac-toe) | [Demo](https://elenawikoff.github.io/odin-projects/tic-tac-toe) | ✅ | [Original](https://github.com/ElenaWikoff/odin-tic-tac-toe) |
 | Restaurant Page          | ES6 modules, Webpack                  | Code       | Demo         | ✅ |  |
 | Todo List                | SOLID principles                      | Code       | Demo         | ❌ |  |
 | Weather App              | Asynchronous JavaScript and APIs      | Code       | Demo         | ❌ |  |
