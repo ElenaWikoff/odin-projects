@@ -41,7 +41,7 @@
 | Binary Search Trees | Data structures and algorithms | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/binary-search-trees) | - | ✅ | [Original](https://github.com/ElenaWikoff/odin-binary-search-trees)
 | Knights Travails | Data structures and algorithms | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/knights-travails) | - | ✅ | [Original](https://github.com/ElenaWikoff/odin-knight-travails)
 | Testing Practice | Test Driven Development | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/testing-practice) | - | ✅ | [Original](https://github.com/ElenaWikoff/odin-testing-practice)
-| Battleship | Test Driven Development | Code       | Demo         | ❌ |  |
+| Battleship | Test Driven Development | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/battleship) | Demo | ❌ | [Original](https://github.com/ElenaWikoff/odin-battleship/), frontend incomplete |
 
 ### React
 
