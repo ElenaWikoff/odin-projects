@@ -43,6 +43,14 @@
 | Testing Practice | Test Driven Development | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/testing-practice) | - | ✅ | [Original](https://github.com/ElenaWikoff/odin-testing-practice)
 | Battleship | Test Driven Development | [Code](https://github.com/ElenaWikoff/odin-projects/tree/main/battleship) | Demo | ❌ | [Original](https://github.com/ElenaWikoff/odin-battleship/), frontend incomplete |
 
+### Advanced HTML and CSS
+
+> It's time to dig in and become the CSS expert you deserve to be. After this course you'll be equipped to create web projects that look beautiful on any device!
+
+| Project | Topic | Repository | Live Preview | Completed | Notes |
+|---------|-------|------------|--------------|-----------|-------|
+| Homepage | Responsive design | [Code](https://github.com/ElenaWikoff/odin-projects) | [Demo](https://elenawikoff.github.io/odin-projects/) | ❌ | This repo |
+
 ### React
 
 > Let's learn React, the most popular JavaScript library for building user interfaces. Take your frontend skills to a whole new level!
