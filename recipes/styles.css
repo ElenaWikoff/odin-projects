@@ -138,8 +138,8 @@ body {
 main {
   position: relative;
   background: white;
-  width: auto;
-  /* max-width: 600px; */
+  width: 100%;
+  max-width: 1000px;
   padding: 16px 32px;
   display: flex;
   flex-direction: column;
