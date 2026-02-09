@@ -11,7 +11,6 @@
   text-align: center;
   padding: 0 8px;
   border-bottom: 3px solid var(--light-blue);
-  /* border-right: 3px solid var(--light-blue); */
   font-size: 1.125rem;
 }
 
@@ -20,4 +19,9 @@
     text-align: left;
     font-size: 0.825rem;
   }
+}
+
+.recipe-attribution {
+  position: absolute;
+  bottom: -32px;
 }
