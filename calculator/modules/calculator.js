@@ -9,6 +9,8 @@ const defaultCalc = {
     input: "0",
     op: "",
     memory: "0",
+    canAppend: true,
+    canAC: true,
 };
 
 export default class Calculator {
@@ -17,23 +19,35 @@ export default class Calculator {
         this.input = defaultCalc.input;
         this.op = defaultCalc.op;
         this.memory = defaultCalc.memory;
+        this.canAppend = defaultCalc.canAppend;
+        this.canAC = defaultCalc.canAC;
     }
 
     // Perform operation on values.
     #calc(op, x1, x2) {
+        console.log(`Calculating: ${x1} ${op} ${x2}`);
         switch (op) {
             case "+": return add(x1, x2);
             case "-": return sub(x1, x2);
             case "*": return mult(x1, x2);
             case "/": return div(x1, x2);
             case "^": return exp(x1, x2);
-            default: throw new InvalidInputError(`Invalid operator: ${op}.`);
+            case " ":
+            case "": return x2;
+            default: throw new Error(`Invalid operator: ${op}.`);
         }
     }
 
     // Evaluate new value in calculator based on value, input and operator.
     #eval() {
         this.value = this.#calc(this.op, Number(this.value), Number(this.input));
+        if (isNaN(this.value) || !isFinite(this.value)) {
+            this.input = "NaN";
+            this.value = "0";
+            this.canAppend = false;
+        } else {
+            this.input = "" + this.value;
+        }
     }
 
     // Clear methods
@@ -44,33 +58,37 @@ export default class Calculator {
             this.value = defaultCalc.value;
             this.input = defaultCalc.input;
             this.op = defaultCalc.op;
+            this.memory = defaultCalc.memory;
+            this.canAppend = defaultCalc.canAppend;
+            this.canAC = defaultCalc.canAC;
         } else if (type === 'ce') {
+            this.canAC = true;
             this.input = defaultCalc.input;
         } else {
-            throw InvalidInputError(`Invalid type: ${type}`);
+            throw Error(`Invalid type: ${type}`);
         }
     }
 
     // Memory methods
 
-    // 'mc' - Clear memory to default: '0'
+    // 'mc' - Memory clear: Clear value in memory
     memClear() {
         this.memory = defaultCalc.memory;
     }
 
-    // 'mr' - Return value in memory
+    // 'mr' - Memory recall: Set input to value in memory
     memRecall() {
-        return this.memory;
+        this.input = this.memory;
     }
 
-    // 'm+' - Add value to value in memory
-    memPlus(value) {
-        this.memory = this.#calc("+", this.memory, value);
+    // 'm+' - Memory plus: Add value to value in memory
+    memPlus() {
+        this.memory = this.#calc("+", Number(this.memory), Number(this.input));
     }
 
-    // 'm-' - Subtract value from value in memory
-    memMinus(value) {
-        this.memory -= this.#calc("-", this.memory, value);
+    // 'm-' - Memory minus: Subtract value from value in memory
+    memMinus() {
+        this.memory = this.#calc("-", Number(this.memory), Number(this.input));
     }
 
     // Evalutation methods
@@ -79,11 +97,12 @@ export default class Calculator {
     #setOp(op) {
         this.#eval();
         this.op = op;
+        this.canAppend = false;
     }
 
     // '=' - Evaluate
     equal() {
-        if (this.operator.length == 1) {
+        if (this.op.length == 1) {
             this.#eval();
         }
     }
@@ -91,7 +110,6 @@ export default class Calculator {
     // '+'  - Set operator to '+' (add)
     add() {
         this.#setOp("+");
-
     }
 
     // '-'  - Set operator to '-' (subtract)
@@ -119,11 +137,20 @@ export default class Calculator {
 
     // Input digit or decimal: '.' or '1,2,3,4,5,6,7,8,9,0'
     addDigit(digit) {
-        if (this.input === "0" && digit !== ".") {
-            this.input = digit + "";
-        } else {
+        if (this.canAppend && this.input !== "0") {
+            if (digit === "." && this.input.includes(".")) {
+                return;
+            }
             this.input += digit;
+        } else {
+            if (digit === ".") {
+                this.input = "0.";
+            } else {
+                this.input = digit;
+            }
+            this.canAppend = true;
         }
+        this.canAC = false;
     }
 
     // Square root input
@@ -139,6 +166,7 @@ export default class Calculator {
     // Set input to pi
     pi() {
         this.input = pi();
+        this.canAC = false;
     }
 
     // Round input to nearest cent
@@ -153,7 +181,7 @@ export default class Calculator {
 
     // Inverse sign of input
     inverse() {
-        this.input = inverse(this.input);
+        this.input = this.input * -1;
     }
 
     // Calculate cosine of input

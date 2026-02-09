@@ -6,6 +6,8 @@
     --calc-op-bg-active: #FFCC00;
     --calc-num-bg: #fafafa;
     --calc-btn-color: #2a2a2a;
+    --calc-screen-color: #2a2a2a;
+    --calc-screen-bg: #ffffff;
 }
 
 * {
@@ -31,6 +33,7 @@ main {
     background-color: var(--calc-bg);
     padding: 10px;
     gap: 8px;
+    border-radius: 5px;
 }
 
 .buttons-container {
@@ -61,7 +64,8 @@ main {
 }
 
 .btn-action {
-    background-color: var(--calc-btn-bg);
+    background-color: var(--calc-btn-bg) !important;
+    font-weight: normal !important;
 }
 
 .btn-action:active,
@@ -84,10 +88,29 @@ main {
 }
 
 .btn-inner {
-    background-color: var(--calc-num-bg);
+    background-color: var(--calc-num-bg) !important;
 }
 
 .btn-inner:active,
 .btn-inner:focus {
     background-color: var(--calc-bg);
+}
+
+#fscreen::-webkit-outer-spin-button,
+#fscreen::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#fscreen {
+    width: 100%;
+    font-size: 2rem;
+    -moz-appearance: textfield;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    border: 1px solid var(--calc-btn-border);
+    color: var(--calc-screen-color);
+    background-color: var(--calc-screen-bg);
 }
