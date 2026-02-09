@@ -1,6 +1,7 @@
 .ingredient-list {
   display: grid;
   padding: 0;
+  margin: 0;
   width: 100%;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 16px 0px;
@@ -11,20 +12,47 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin: 0;
   padding: 0 8px;
   border-bottom: 3px solid var(--light-blue);
   font-size: 1.125rem;
 }
 
+.recipe-attribution {
+  position: absolute;
+  bottom: -32px;
+}
+
 @media screen and (max-width: 600px) {
+  .ingredient-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .ingredient-list li {
     display: block;
     text-align: left;
     font-size: 0.825rem;
+    width: 100%;
+  }
+
+  .recipe-attribution {
+    bottom: -62px;
+    font-size: 0.75rem;
   }
 }
 
-.recipe-attribution {
-  position: absolute;
-  bottom: -32px;
+@media screen and (max-width: 425px) {
+
+  .recipe-attribution {
+    bottom: -58px;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+
+  .recipe-attribution {
+    bottom: -66px;
+  }
+
 }

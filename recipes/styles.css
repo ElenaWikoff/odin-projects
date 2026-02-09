@@ -154,6 +154,7 @@ main {
 }
 
 .decoration {
+  --decoration-offset: 32px;
   position: absolute;
   color: var(--orange);
   width: 32px;
@@ -161,23 +162,23 @@ main {
 }
 
 .decoration:first-child {
-  top: -32px;
-  left: -32px;
+  top: calc(var(--decoration-offset) * -1);
+  left: calc(var(--decoration-offset) * -1);
 }
 
 .decoration:nth-child(2) {
-  top: -32px;
-  right: -32px;
+  top: calc(var(--decoration-offset) * -1);
+  right: calc(var(--decoration-offset) * -1);
 }
 
 .decoration:nth-child(3) {
-  bottom: -32px;
-  right: -32px;
+  bottom: calc(var(--decoration-offset) * -1);
+  right: calc(var(--decoration-offset) * -1);
 }
 
 .decoration:nth-child(4) {
-  bottom: -32px;
-  left: -32px;
+  bottom: calc(var(--decoration-offset) * -1);
+  left: calc(var(--decoration-offset) * -1);
 }
 
 h1,
@@ -333,7 +334,9 @@ footer {
 }
 
 @media (prefers-contrast: more) {
-  .attribution a {
+
+  .attribution a,
+  .breadcrumbs a {
     color: white;
   }
 }
@@ -342,8 +345,56 @@ footer {
   position: absolute;
   top: -72px;
   left: -32px;
+  white-space: nowrap;
 }
 
 .breadcrumbs a {
   color: var(--orange);
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    margin-top: 32px;
+  }
+
+  .breadcrumbs {
+    font-weight: bold;
+    font-size: larger;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    padding: 5px;
+    margin-bottom: 32px;
+    border-width: 20px;
+  }
+
+  .decoration {
+    --decoration-offset: 14px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .breadcrumbs {
+    top: -58px;
+    left: -24px;
+  }
+
+  .attribution {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    font-size: 0.5rem;
+  }
 }
